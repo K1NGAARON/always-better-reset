@@ -1,39 +1,78 @@
-const job = [
+const servicesContent = [
     {
-        title: "Personal coaching",
-        body: "Tekstje voor personal coaching job",
-        img: "/job-openings/img/personal-coach.jpg",
-        tag: "coaching",
-        link: "/job-openings/personal-coach/",
+        title: "",
+        id: "",
+        img: "",
+        body: "",
     },
     {
-        title: "Growth hacker",
-        body: "Tekstje voor growth hacker job",
-        img: "/job-openings/img/growth-hacker.jpg",
-        tag: "marketing",
-        link: "/job-openings/growth-hacker/",
+        title: "",
+        id: "",
+        img: "",
+        body: "",
     },
     {
-        title: "Communicatieverantwoordelijke",
-        body: "Tekstje voor marketing communicatie job",
-        img: "/job-openings/img/marketing-communicatie.jpg",
-        tag: "marketing",
-        link: "/job-openings/marketing-communicatie-verantwoordelijke/",
+        title: "",
+        id: "",
+        img: "",
+        body: "",
     },
     {
-        title: "Operationeel manager",
-        body: "Tekstje voor operational manager",
-        img: "/job-openings/img/personal-coach.jpg",
-        tag: "admin",
-        link: "/job-openings/operational-manager/",
-    }
+        title: "",
+        id: "",
+        img: "",
+        body: "",
+    },
+    {
+        title: "",
+        id: "",
+        img: "",
+        body: "",
+    },
+    {
+        title: "",
+        id: "",
+        img: "",
+        body: "",
+    },
 ];
+
+const experiencesContent = [
+    {
+        title: "",
+        id: "",
+        img: "",
+        body: "",
+    },
+    {
+        title: "",
+        id: "",
+        img: "",
+        body: "",
+    },
+    {
+        title: "",
+        id: "",
+        img: "",
+        body: "",
+    },
+    {
+        title: "",
+        id: "",
+        img: "",
+        body: "",
+    },
+];
+
 
 function filterContent(e) {
     // Toggle Active Class on Filter
     $('.filter-btn').removeClass('active');
     $(this).addClass('active');
 
+
+
+    // 
     $('.job-openings .card').fadeOut();
 
     // Selected Tag
@@ -46,40 +85,3 @@ function filterContent(e) {
     }
 };
 
-function createCards(e) {
-    const target = document.querySelector('#jobs-openings');
-
-    if (target) {
-        const cards = job.map(job => {
-            const tagWithSpaces = job.tag.replace(/-/g, ' ');
-
-            return `
-                <div class="card ${job.tag}">
-                    <div class="card-image">
-                        <img src="${job.img}" alt="${job.title}">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <p class="tag">
-                            ${tagWithSpaces}
-                        </p>
-                        <h5>
-                            ${job.title}
-                        </h5>
-                        <a href="${job.link}" class="btn ghost no-border">
-                            Lees meer <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-            `;
-        }).join('');
-    
-        target.innerHTML = cards;
-    }
-};
-
-
-$(document).ready(function() {
-    createCards();
-    $('.filter-btn').click(filterContent);
-});

@@ -1,3 +1,7 @@
+:root {
+    --black: #000000;
+}
+
 .banner {
     position: relative;
     background-color: var(--black);

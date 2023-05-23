@@ -25,8 +25,30 @@
     opacity: 0.8;
 }
 
-.section.dark h2 {
+.section.black {
     color: var(--white);
+}
+
+.section .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section .filters .filter-btn {
+    color: var(--white);
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.section .filters .filter-btn:hover {
+    cursor: pointer;
+}
+
+.section .filters .filter-btn.active {
+    opacity: 1;
+    font-weight: 700;
+    transition: var(--transition);
 }
 
 .form-wrapper {
@@ -94,81 +116,46 @@
     gap: 20px;
 }
 
-.wrapper.cards .card {
+.wrapper.cards .item {
     flex: 0 1 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    /* overflow: hidden; */
     background-color: var(--white);
     border-radius: var(--borderRadius);
 }
 
-.wrapper.cards .card .tag {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 700;
-    color: #606478;
-    margin-bottom: 10px;
-}
-
-.wrapper.cards .card .btn.no-border {
-    font-size: 14px;
-    border: none;
-    padding: unset;
-}
-
-.wrapper.cards .card img,
-.wrapper.cards .card .overlay {
+.wrapper.cards .item img,
+.wrapper.cards .item .overlay {
     border-radius: var(--borderRadius);
 }
 
-.wrapper.cards .card .overlay {
-    background-color: var(--black);
-    opacity: 0;
+.wrapper.cards .item .item-content {
     position: absolute;
-}
-
-.wrapper.cards .card .card-image {
-    flex: 1 0;
-    display: flex;
-    position: relative;
-}
-
-.wrapper.cards .card .card-content {
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
-    padding: 20px;
+    gap: 10px;
     z-index: 10;
-    border-bottom-right-radius: var(--borderRadius);
-    border-bottom-left-radius: var(--borderRadius);
 }
 
-.wrapper.cards .card .card-content h5 {
-    color: var(--black);
+.wrapper.cards .item .overlay {
+    background: var(--black);
 }
 
-.wrapper.cards .card .card-content h5 {
+.wrapper.cards .item .item-content h3 {
     font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    color: var(--white);
 }
 
-.wrapper.cards .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
+.wrapper.cards .item .item-content .btn {
+    font-size: 14px;
+    margin: 0 auto;
+    border: none;
 }
 
-.wrapper.cards .card-image {
-    border-radius: var(--borderRadius);
-    overflow: hidden;
-}
-
-.wrapper.cards .card-image:hover img {
-    transform: scale(1.05);
-    transition: var(--transition);
+.wrapper.experiences-wrapper .item {
+    flex: 1 0 20%;
 }

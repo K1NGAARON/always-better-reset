@@ -134,6 +134,7 @@
 }
 
 .wrapper.cards .item .item-content {
+    text-align: center;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -158,4 +159,41 @@
 
 .wrapper.experiences-wrapper .item {
     flex: 1 0 20%;
+}
+
+@media (max-width: 560px) {
+    .banner h1,
+    .banner p {
+        max-width: 100%;
+    }
+
+    .banner, 
+    .banner .row, 
+    .banner .overlay {
+        height: 70vh;
+    }
+
+    .section .row.flex-col {
+        gap: 40px;
+    }
+
+    .section .wrapper.cards {
+        width: 100%;
+    }
+
+    .section .wrapper.cards .item {
+        flex: 1 0 45%;
+    }
+
+    .section .wrapper.cards .item .item-content h3 {
+        font-size: 18px;
+    }
+
+    .wrapper.cards .item .item-content .btn {
+        display: none;
+    }
+
+    .section .row.flex-col.center {
+        text-align: center;
+    }
 }

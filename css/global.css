@@ -12,6 +12,10 @@
     gap: 20px;
 }
 
+.section .row.filter-row {
+    max-width: 1200px;
+}
+
 .banner h1,
 .banner p {
     color: var(--white);
@@ -40,6 +44,7 @@
 }
 
 .section .filters .filter-btn {
+    font-size: 30px;
     color: var(--white);
     opacity: 0.6;
     transition: var(--transition);
